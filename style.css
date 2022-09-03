@@ -28,3 +28,9 @@
     background-color: white;
     overflow: hidden;
 }
+
+@media(max-width:400px) {
+    * {
+        width: 100%;
+    }
+}
