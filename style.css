@@ -30,8 +30,10 @@
 }
 
 @media(max-width:330px) {
-    .accordion .panel {
+    .accordion {
         width: 100%;
+    }
+    .panel {
         overflow-x: scroll;
     }
 }
