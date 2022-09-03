@@ -29,7 +29,7 @@
     overflow: hidden;
 }
 
-@media(max-width:330px) {
+@media(max-width:360px) {
     .accordion {
         width: 100%;
     }
