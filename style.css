@@ -27,9 +27,6 @@
     display: none;
     background-color: white;
     overflow: hidden;
-    display: flex;
-    align-items: left;
-    justify-content: start;
 }
 
 @media(max-width:340px) {
@@ -37,5 +34,4 @@
         width: 100%;
         overflow-x: scroll;
     }
-    s
 }
