@@ -1,41 +1,50 @@
-* {
-    margin: 0 auto;
-    width: 90%;
-    margin-top: 5px;
-}
-
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-    background-color: #ccc;
-}
-
-.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-    font-size: 1em;
-    width: 100%;
-}
-
-@media(max-width:360px) {
-    .accordion .panel {
+    * {
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 5px;
+    }
+    
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
         width: 100%;
-    }
-    .panel pre {
-        overflow-x: scroll;
+        border: none;
         text-align: left;
+        outline: none;
+        transition: 0.4s;
     }
-}
+    
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+    
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+        margin-left: 0px;
+    }
+    
+    @media(max-width:360px) {
+        * {
+            margin: 0 auto;
+            width: 100%;
+            margin-top: 5px;
+        }
+        .accordion {
+            width: 100%;
+            position: static;
+        }
+        .panel {
+            width: 100%;
+            float: left;
+        }
+        .panel pre {
+            overflow-x: scroll;
+            float: left;
+        }
+    }
