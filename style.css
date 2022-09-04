@@ -37,7 +37,6 @@
         }
         .accordion {
             width: 100%;
-            position: static;
         }
         .panel {
             width: 90%;
@@ -45,5 +44,6 @@
         }
         .panel pre {
             overflow-x: scroll;
+            margin: 0;
         }
     }
