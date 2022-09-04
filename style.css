@@ -40,11 +40,10 @@
             position: static;
         }
         .panel {
-            width: 100%;
+            width: 90%;
             float: left;
         }
         .panel pre {
             overflow-x: scroll;
-            float: left;
         }
     }
