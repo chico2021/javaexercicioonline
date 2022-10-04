@@ -283,6 +283,20 @@
                 </div>
                 <img src="op_relacionais.PNG" alt="operadores" width="100" height="100">
             </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Caracteres de escape</p>
+                </div>
+                <img src="escape_java.PNG" alt="operadores" width="100" height="100">
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <p>Classe Math Java </p>
+                </div>
+                <img src="ClassMath_java.PNG" alt="operadores" width="100" height="100">
+
+            </div>
             <button class="accordion">BLOCO 2.1 Crie um programa mostrando um cast implicito</button>
             <div class="panel">
                 <pre>
@@ -418,10 +432,20 @@
             <button class="accordion">BLOCO 2.10 Faça um Programa que converta metros para centímetros</button>
             <div class="panel">
                 <pre>
+                    import java.util.*;
                     public class Main{
                         public static void main(String[] args){
                             
-
+                            double metro,centimetro,resultado;
+		
+                            Scanner sc = new Scanner(System.in);
+                            
+                        System.out.println("Digite a metragem : ");
+                        metro = sc.nextDouble();
+                        
+                        resultado = metro * 100;
+                        
+                        System.out.println("Resultado em centimetros : " + resultado);                   
 
                             }
                         }
@@ -430,10 +454,18 @@
             <button class="accordion">BLOCO 2.11 Faça um Programa que converta Reais para Dólar </button>
             <div class="panel">
                 <pre>
+                    import java.text.DecimalFormat;
+                    import javax.swing.JOptionPane;
                     public class Main{
                         public static void main(String[] args){
                             
-
+                            double res,dolar=5.45;
+                            double reais = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor em reais"));
+                            DecimalFormat dc = new DecimalFormat("#.##");
+                            
+                            res =reais/dolar;
+                            
+                            JOptionPane.showMessageDialog(null,"Conversão de reais para dólar a 5,45 : " + dc.format(res)+ " Dólar");
 
 
                             }
@@ -443,9 +475,18 @@
             <button class="accordion">BLOCO 2.12 Faça um Programa que calcule a área do círculo .</button>
             <div class="panel">
                 <pre>
+                    import java.text.DecimalFormat;
+                    import javax.swing.JOptionPane;
                     public class Main{
                         public static void main(String[] args){
+                           
+                            final double PI = 3.14;
+                            double raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do raio"));
+                            DecimalFormat dc = new DecimalFormat("#.##");
                             
+                            double area  = PI*(raio*raio);
+                            
+                            JOptionPane.showMessageDialog(null," Área do círculo: " + dc.format(area));
 
 
 
@@ -457,9 +498,18 @@
             <button class="accordion">BLOCO 2.13 Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.</button>
             <div class="panel">
                 <pre>
+                    import java.util.*;
                     public class Main{
                         public static void main(String[] args){
+                            double lado=0,areaQ;
+                            Scanner sc = new Scanner(System.in);
                             
+                            System.out.println("Digite o lado do quadrado :");
+                            lado = sc.nextDouble();
+                            
+                            areaQ = (lado *lado)*2;
+                            
+                            System.out.println("Área do quadrado com seu dobro :" + areaQ); 
 
 
 
@@ -471,9 +521,21 @@
             <button class="accordion">BLOCO 2.14 Faça um Programa que receba dois números e informe o produto deles.</button>
             <div class="panel">
                 <pre>
+                    import java.util.*;
                     public class Main{
                         public static void main(String[] args){
+
+                            double num1,num2;
+                            Scanner sc = new Scanner(System.in);
                             
+                            System.out.println("Digite o num1 :");
+                            num1 = sc.nextDouble();
+                            System.out.println("Digite o num2 :");
+                            num2 = sc.nextDouble();
+                            
+                            double produto  = num1 *num2;
+                            
+                            System.out.println(" O produto dos números num1 * num2 é :" + produto);
 
 
 
@@ -481,6 +543,36 @@
 
                             }
                         }
+                </pre>
+            </div>
+
+            <button class="accordion">BLOCO 2.15  Reproduza os caracteres de escape Java.</button>
+            <div class="panel">
+                <pre>
+                   
+                    public class Main{
+                        public static void main(String[] args){
+
+                            //insere um Tab Space  
+                            String str = "Andrew\tGarfield";  
+                            System.out.println(str);  
+                            //insere uma nova linha  
+                            String str1 =  "a melhor maneira\n de comunicar \nan idéia \nis para colocá-la em prática" ;  
+                            System.out.println(str1);  
+                            //insere uma barra invertida  
+                            String str2 =  "E\\Ou" ;  
+                            System.out.println(str2);  
+                            //insere um carro  
+                            String str3 =  "Carro\rRetorno" ;  
+                            System.out.println(str3);  
+                            // imprime uma aspa simples  
+                            String str4 =  "Wall Street\'s" ;  
+                            System.out.println(str4);  
+                            // imprime aspas duplas  
+                            //String str5 = "New\'Twilight'Line";  
+                            String str5 =  "'JavaTpoint'" ;  
+                            System.out.println(str5);  
+                            } } } }
                 </pre>
             </div>
         </div>
