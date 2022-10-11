@@ -628,56 +628,46 @@
             <button class="accordion">BLOCO 2.17  Reproduza a Classe String em java.</button>
             <div class="panel">
                 <pre>
-                   
-                    public class Main{
-                        public static void main(String[] args){
-
-                            <button class="accordion">BLOCO 2.17  Reproduza a Classe String em java.</button>
-                            <div class="panel">
-                                <pre>
                                    
-                                    public class Main{
-                                        public static void main(String[] args){
+            public class Main{
+            public static void main(String[] args){
                 
-                                            String primeiroNome = "josé";
-                                            String nomeDoMeio = "Bernardino";
-                                            String sobreNome = "Silva";
+            String primeiroNome = "josé";
+            String nomeDoMeio = "Bernardino";
+            String sobreNome = "Silva";
                                             
-                                            int idade = 25;
-                                            int num=1250;
+            int idade = 25;
+            int num=1250;
                                             
-                                            float valor = 1350;
+            float valor = 1350;
                                             
-                                            String str1 = String.format("Meu nome é %s",primeiroNome,nomeDoMeio,sobreNome);
-                                            System.out.println(str1);
-                                            String str2 = String.format("Meu nome é %s %s",primeiroNome,nomeDoMeio,sobreNome);
-                                            System.out.println(str2);
-                                            String str3 = String.format("Meu nome é %s %s %s",primeiroNome,nomeDoMeio,sobreNome);
-                                            System.out.println(str3);
-                                            String str4 = String.format("Meu nome é %3$s %2$s %1$s",primeiroNome,nomeDoMeio,sobreNome);
-                                            System.out.println(str4);
+            String str1 = String.format("Meu nome é %s",primeiroNome,nomeDoMeio,sobreNome);
+            System.out.println(str1);
+            String str2 = String.format("Meu nome é %s %s",primeiroNome,nomeDoMeio,sobreNome);
+            System.out.println(str2);
+            String str3 = String.format("Meu nome é %s %s %s",primeiroNome,nomeDoMeio,sobreNome);
+            System.out.println(str3);
+            String str4 = String.format("Meu nome é %3$s %2$s %1$s",primeiroNome,nomeDoMeio,sobreNome);
+            System.out.println(str4);
                                             
-                                            String str5 = String.format("Eu tenho %d anos de idade ",idade);
-                                            System.out.println(str5);
-                                            String str6 = String.format("Eu tenho %10d anos de idade ",num);
-                                            System.out.println(str6);
-                                            String str7 = String.format("Eu tenho %,10d anos de idade ",num);
-                                            System.out.println(str7);
+            String str5 = String.format("Eu tenho %d anos de idade ",idade);
+            System.out.println(str5);
+            String str6 = String.format("Valor  %10d  ",num);
+            System.out.println(str6);
+            String str7 = String.format("Valor  %,10d ",num);
+            System.out.println(str7);
                                             
-                                            String str8 = String.format("%.2f", valor);
-                                            System.out.println(str8);
-                             
-                                            } } 
-                                </pre>
+            String str8 = String.format("%.2f", valor);
+            System.out.println(str8);
+             } } 
+            </pre>
             </div>
 
-            } }
-            </pre>
         </div>
     </div>
     </div>
 
-    <button class="accordion">BLOCO 3. OPERADORES</button>
+    <button class="accordion">BLOCO 3. CONDICIONAL</button>
     <div class="panel">
         <pre>
             <!--
@@ -726,13 +716,197 @@ class OperadorEte3 {
    }  
 }  
 -->
-Operadores Aritméticos :
-Adição: (+)             int num = a+b;
-Subtração: (-)          int num = a-b;
-Multiplicação: (*)      int num = a*b;
-Divisão: (/)            double num = a/b;
-Módulo - resto da divisão: (%) double num = a % b;
+
+A instrução condicional if em Java tem por finalidade tomar uma 
+decisão de acordo com o resultado de uma condição 
+especificada (teste lógico). Dependendo do resultado 
+retornado pelo teste lógico realizado, um bloco de instruções 
+específico será executado.
+
+
+//exemplo 1
+if(idade >=18){
+    
+    System.out.println("adulto");
+}
+
+****************************************
+//exemplo 2
+if(idade >=18){
+    
+    System.out.println("adulto");
+}else{
+    
+    System.out.println("De menor");
+}
+*****************************************
+//exemplo 3
+    if(idade <12){
+        System.out.println("Criança");
+    }else if(idade >= 18){
+        System.out.println("Adulto");
+    }else{
+        
+        System.out.println("Adolescente");
+    }
+******************************************
+//exemplo 4
+    if(idade >12 && idade <18){
+       System.out.println("Adolescente");
+   }else if(idade <12){
+       System.out.println("Criança");
+   }else{
+       System.out.println("Adulto");
+   }
+*******************************************
+//exemplo 5
+ if(idade >12 && idade <18){
+       System.out.println("Adolescente");
+   }else if(idade >=18){
+       System.out.println("Adulto");
+   }else{
+       System.out.println("Criança");
+   }
+*********************************************
+//exemplo 6
+//validaçao de login_1
+public class Condicional {
+    
+    public static void main(String[] args) {
+        
+  String  login = JOptionPane.showInputDialog("Digite seu login :");
+  int senha = Integer.parseInt(JOptionPane.showInputDialog("Digite sua senha : "));
+          
+  if(login.equals("ete") && senha ==(123)){
+      
+      JOptionPane.showMessageDialog(null,"Seja bem vindo ao sistema");
+  }else{
+      
+     JOptionPane.showMessageDialog(null,"Login ou Senha errado!"); 
+  } 
+  *******************************************************
+//exemplo 7
+//validaçao de login_2
+ 
+  if(login.equals("adm") && senha.equals("123")){
+      
+      JOptionPane.showMessageDialog(null,"seja bem vindo ao sistema");
+      
+    }else if(login != "adm" && senha.equals("123")){
+      JOptionPane.showMessageDialog(null,"login Errado!!");
+  }else {
+      
+        JOptionPane.showMessageDialog(null,"Senha errada!!");
+  }
         </pre>
+    </div>
+    <button class="accordion">BLOCO 3.1 CONDICIONAL TERNÁRIO</button>
+    <div class="panel">
+        <pre>
+            public class OperadorTernario {
+    
+                public static void main(String[] args) {
+                    
+                   
+              /*      
+                       <<<(expressão booleana) ? código 1 : código 2;>>>
+                    
+               Ao avaliar a expressão booleana, caso ela seja verdadeira, o código 1, 
+              declarado após o ponto de interrogação (?) será executado; do contrário, 
+              o programa irá executar o código 2, declarado após os dois pontos (:).
+            */
+
+                    //Exemplo 1
+                    int numDias =10;
+                    
+                    System.out.println((numDias < 15)?"Primeira quizena" : "Segunda quizena");
+                    
+                    
+                    //exemplo 2
+                    int x=5;
+                       
+                    var res= ((x>9)?"aprov":"repo");
+                    
+                    System.out.println(res);
+                    
+                }
+                
+            }
+        </pre>
+    </div>
+    <button class="accordion">BLOCO 3.3 CONDICIONAL SWITCH</button>
+    <div class="panel">
+        <pre>
+Switch é uma declaração semelhante ao if, mas que usa valores inteiros para a tomada 
+de decisões ao invés de expressões booleanas. (só pode ser usada em
+dados dos tipos short, int, byte ou char). Se o tipo de dado não for inteiro, 
+o comando switch irá executar uma promoção desse valor ao tipo int para
+somente depois executar a ramificação .
+
+A sintaxe básica para declarações switch é a seguinte:
+
+Switch ((int)expressão) {
+
+// bloco de comandos
+case ((int) valor_1):
+// bloco de comandos
+break;
+
+case ((int) valor_2):
+// bloco de comandos
+break;
+
+default :
+
+// bloco de comandos padrão.
+// Se nenhum dos valores acima corresponder à
+// expressão definida no comando switch, então
+// o programa executará o trecho default.
+// o trecho default é opcional.
+break;
+****************************************************
+public class Swicth {
+    
+    public static void main(String[] args) {
+        
+        String dia = "seg";
+        switch (dia) {
+            case "dom":
+                System.out.println("Domingo");
+                break;
+            case "seg":
+                System.out.println("Segunda");
+                break;
+            case "ter":
+                System.out.println("Terça");
+                break;
+            case "qua":
+                System.out.println("Quarta");
+                break;
+            case "qui":
+                System.out.println("Quinta");
+                break;
+            case "sext":
+                System.out.println("Sexta");
+                break;
+            case "sab":
+                System.out.println("Sábado");
+                break;
+            
+            default:
+                System.out.println("Dia inválido");
+                break;
+        }
+    }
+    }
+    **********************************************************
+1-Faça um Programa que peça dois números e imprima o maior deles.
+2-Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+3-Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+4-Faça um Programa que leia três números e mostre o maior deles.
+5-Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+</pre>
     </div>
     <!--
     <button class="accordion">BLOCO 4. CLASSE STRING</button>
@@ -804,7 +978,7 @@ break;
             HJHJHJHJHJH
         </pre>
     </div>
--->
+    -->
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
