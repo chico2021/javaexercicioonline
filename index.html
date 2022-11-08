@@ -1043,6 +1043,56 @@ System.out.println("Minhas frutas : " +res);
 }}}
 </pre>
     </div>
+    <button class="accordion">BLOCO 4 MÉTODOS</button>
+    <div class="panel">
+        <pre>
+            public class Metodos {
+    
+                public static void main(String[] args) {
+                    
+                    
+                    mensagem();
+                    soma(25,15);
+                    System.out.println("Minha mensagem:" + mensagem1());
+                    dividir(20,4);
+                    
+                    
+                }
+                //com retorno sem parametro
+                
+                static String mensagem1(){
+                    
+                      return "minha vida";
+                    
+                }
+                
+                    //sem retorno sem parametro
+                    public static void mensagem(){
+                        
+                        System.out.println("mensagem enviada");
+                    }
+                    
+                    
+                    //sem retorno com parâmetro
+                    public static void soma(int a,int b){
+                        
+                        System.out.println("O resultado da soma :" + (a+b));
+                    }
+                    
+                    
+                    //com retorno com parametro
+                    
+                    static double dividir(double x , double y){
+                        
+                        System.out.println("Minha divisão :" + (x/y));
+                        return x/y;
+                        
+                    }
+                    
+                
+            }
+</pre>
+    </div>
     <!--
     <button class="accordion">BLOCO 4. CLASSE STRING</button>
     <div class="panel">
